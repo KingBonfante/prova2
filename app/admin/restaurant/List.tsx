@@ -10,6 +10,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { revalidatePath } from "next/cache"
+import { Trash2 } from "lucide-react"
 
 interface IRestaurant {
   id: number,
@@ -53,7 +54,8 @@ export default async function ListRestaurant() {
             <TableCell>
               <form>
                 <input type="text" hidden name="id" value={item.id} />
-                <Button variant="destructive" formAction={deleteRestaurant}>EXCLUIR</Button>
+                <Button variant="destructive" formAction={deleteRestaurant}>
+                <Trash2 className="mr-3" />EXCLUIR</Button>
               </form>
             </TableCell>
           </TableRow>

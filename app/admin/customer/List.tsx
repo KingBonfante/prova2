@@ -10,6 +10,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { revalidatePath } from "next/cache"
+import { Trash2 } from "lucide-react"
 
 interface ICustomer {
   id: number,
@@ -28,7 +29,7 @@ export default async function ListCustomer() {
   async function deleteCustomer(formData: FormData) {
     "use server"
     const id = formData.get("id") as string;
-    const response = await fetch("https://server20241-six.vercel.app/customers/"+id, {method: "DELETE"});
+    const response = await fetch("https://server20241-six.vercel.app/customers/" + id, { method: "DELETE" });
     revalidatePath("/admin/customer")
 
   }
@@ -45,7 +46,7 @@ export default async function ListCustomer() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {customers.map((item:ICustomer) => (
+        {customers.map((item: ICustomer) => (
           <TableRow key={item.id}>
             <TableCell className="font-medium">{item.id}</TableCell>
             <TableCell>{item.name}</TableCell>
@@ -53,7 +54,8 @@ export default async function ListCustomer() {
             <TableCell>
               <form>
                 <input type="text" hidden name="id" value={item.id} />
-                <Button variant="destructive" formAction={deleteCustomer}>EXCLUIR</Button>
+                <Button variant="destructive" formAction={deleteCustomer}>
+                  <Trash2 className="mr-3" />EXCLUIR</Button>
               </form>
             </TableCell>
           </TableRow>

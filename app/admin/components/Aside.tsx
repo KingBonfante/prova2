@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { BookAIcon, Home, MailCheck, PersonStanding } from "lucide-react"
+import { BookAIcon, Home, ChefHat, User } from "lucide-react"
 
 export default function Aside({ className }: any) {
     return (
@@ -15,13 +15,13 @@ export default function Aside({ className }: any) {
                 </a>
                 <a href="/admin/restaurant">
                     <Button variant="ghost">
-                        <PersonStanding className="mr-2" />
+                        <ChefHat className="mr-2" />
                         Restaurantes
                     </Button>
                 </a>
                 <a href="/admin/customer">
                     <Button variant="ghost">
-                        <MailCheck className="mr-2" />
+                        <User className="mr-2" />
                         Clientes
                     </Button>
                 </a>
