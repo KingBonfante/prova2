@@ -51,9 +51,9 @@ export default function SaveBook() {
                     name="title"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Nome:</FormLabel>
+                            <FormLabel>Título:</FormLabel>
                             <FormControl>
-                                <Input placeholder="Digite o nome do Livro" {...field} />
+                                <Input placeholder="Digite o título do Livro" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -64,7 +64,7 @@ export default function SaveBook() {
                     name="description"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Email:</FormLabel>
+                            <FormLabel>Descrição:</FormLabel>
                             <FormControl>
                                 <Input placeholder="Digite a descrição do livro" {...field} />
                             </FormControl>
