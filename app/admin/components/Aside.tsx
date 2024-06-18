@@ -13,16 +13,16 @@ export default function Aside({ className }: any) {
                         Home
                     </Button>
                 </a>
-                <a href="/admin/books">
+                <a href="/admin/restaurant">
                     <Button variant="ghost">
                         <PersonStanding className="mr-2" />
-                        Livros
+                        Restaurantes
                     </Button>
                 </a>
-                <a href="/admin/schools">
+                <a href="/admin/customer">
                     <Button variant="ghost">
                         <MailCheck className="mr-2" />
-                        Escolas
+                        Clientes
                     </Button>
                 </a>
 
